@@ -4,10 +4,14 @@
   "description": "Backend Project Almabetter",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build",
+    "dev": "npm run dev",
+
     "test": "nodemon index.js",
     "client-install": "npm install --prefix client",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run test\" \"npm run client\""
+    "project": "concurrently \"npm run test\" \"npm run client\""
+
   },
   "author": "Mohit Mudgal",
   "license": "ISC",
