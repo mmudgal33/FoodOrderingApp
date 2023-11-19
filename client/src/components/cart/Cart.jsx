@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './cart.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { AiOutlineClose } from 'react-icons/ai'
-import { removeProduct, incProduct, decProduct, emptyCart } from '../../redux/cartSlice'
+import { removeProduct, incProduct, decProduct } from '../../redux/cartSlice'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -52,7 +52,7 @@ const Cart = () => {
 
 
 
-              <img src={`http://localhost:5000/images/${product.img}`} className={classes.img} />
+              <img src={`http://localhost:5000/images/${product.img}`} alt='' className={classes.img} />
               <div className={classes.productData}>
                 <h4 className={classes.title}>{product.title}</h4>
                 <h6 className={classes.subtitle}>{product.desc}</h6>

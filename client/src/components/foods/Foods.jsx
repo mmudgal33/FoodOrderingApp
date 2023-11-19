@@ -34,7 +34,7 @@ const Foods = () => {
               <Link to={`/foods/${foodType.name}`} key={foodType.id} className={classes.food}>
                 <h4>{foodType.name}</h4>
                 <div className={classes.imgContainer}>
-                  <img src={foodType.img} />
+                  <img src={foodType.img} alt="" />
                 </div>
               </Link>
             )) : <h1 className={classes.noLogin}> Please login to give order! </h1>}

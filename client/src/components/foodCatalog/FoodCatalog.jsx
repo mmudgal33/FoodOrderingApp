@@ -24,7 +24,8 @@ const FoodCatalog = () => {
       setFilteredFoods(data)
     }
     fetchFoodType()
-  }, [foodEndpoint])
+    // eslint-disable-next-line
+  }, [foodEndpoint, token])
 
 
   
@@ -37,7 +38,7 @@ const FoodCatalog = () => {
           {filteredFoods.length !== 0 ? filteredFoods.map((f) => (
             <Link to={`/food/${f._id}`} key={f._id} className={classes.food}>
               <div className={classes.imgContainer}>
-                <img src={`http://localhost:5000/images/${f?.img}`} className={classes.foodImg} />
+                <img src={`http://localhost:5000/images/${f?.img}`} alt="" className={classes.foodImg} />
               </div>
               <div className={classes.foodDetails}>
                 <h4 className={classes.foodTitle}>{f?.title}</h4>

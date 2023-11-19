@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import classes from './navbar.module.css'
-import { AiOutlineUser, AiOutlineShoppingCart } from 'react-icons/ai'
+import {  AiOutlineShoppingCart } from 'react-icons/ai'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../redux/authSlice'
 
-
+// AiOutlineUser,
 
 
 
@@ -16,7 +16,7 @@ const Navbar = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   // const { username } = useSelector((state) => state.user)
-  const {user} = useSelector((state) => state.auth)
+  // const {user} = useSelector((state) => state.auth)
   //{user ==null ? `IN` : `OUT`}
 
   

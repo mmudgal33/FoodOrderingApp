@@ -4,11 +4,11 @@ import { Link, useNavigate } from 'react-router-dom'
 import classes from './signup.module.css'
 import img from '../../assets/womaneating.jpg'
 import { register } from '../../redux/authSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 
 
-import axios from 'axios';
+
 
 const Signup = () => {
   const [username, setUsername] = useState("")
@@ -61,7 +61,7 @@ const Signup = () => {
     <div className={classes.signUpContainer}>
       <div className={classes.signUpWrapper}>
         <div className={classes.signUpLeftSide}>
-          <img src={img} className={classes.leftImg} />
+          <img src={img} alt="" className={classes.leftImg} />
         </div>
         <div className={classes.signUpRightSide}>
           <h2 className={classes.title}>Sign Up</h2>
