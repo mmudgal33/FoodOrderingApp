@@ -1,0 +1,112 @@
+.container{
+    height: calc(100vh - 60px);
+    width: 100%;
+    margin-top: 5.5rem;
+    margin-bottom: -5.5rem;
+}
+
+.wrapper{
+    height: 100%;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.title{
+    color: rgb(255, 0, 153);
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.firstMsg{
+    margin-bottom: 24px;
+    font-size: 32px;
+}
+
+.firstMsg > span{
+    color: rgb(255, 0, 136);
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.secondMsg{
+    font-size: 26px;
+}
+
+.secondMsg > span{
+    font-weight: bold;
+    color: rgb(221, 33, 130);
+}
+
+.desc{
+    color: #555;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 50px;
+    max-width: 350px;
+    line-height: 30px;
+}
+
+.buttons{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.buttons > button{
+    outline: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1.25rem;
+    color: #fff;
+    background-color: rgb(255, 0, 144);
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 150ms all;
+    cursor: pointer;
+}
+
+.buttons>button:hover{
+    border-color: rgb(255, 0, 140);
+    background-color: #fff;
+    color: rgb(255, 0, 136);
+}
+
+.buttonSee > a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+left
+.left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+right
+.right{
+   flex: 1;
+}
+
+/* .manEatingImg{
+    height: 40%;
+    width: 100%;
+    object-fit: cover;
+} */
+
+.womanEatingImg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
