@@ -17,8 +17,8 @@ const Login = () => {
       e.preventDefault()
 
       try {
-        // const res = await fetch(`http://localhost:5000/auth/login`, {
-        const res = await fetch(`/auth/login`, {
+        const res = await fetch(`http://localhost:5000/auth/login`, {
+        // const res = await fetch(`/auth/login`, {
           headers: {
             'Content-Type': 'application/json'
           },

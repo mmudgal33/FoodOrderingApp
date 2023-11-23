@@ -26,8 +26,8 @@ const Signup = () => {
       // console.log(values)
       // axios.post('http://localhost:5000/auth/register', values)
 
-      // const res = await fetch(`http://localhost:5000/auth/register`, {
-      const res = await fetch(`/auth/register`, {
+      const res = await fetch(`http://localhost:5000/auth/register`, {
+      // const res = await fetch(`/auth/register`, {
         headers: {
           "Content-Type": 'application/json'
         },

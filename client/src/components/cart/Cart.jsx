@@ -52,8 +52,8 @@ const Cart = () => {
 
 
 
-              {/* <img src={`http://localhost:5000/images/${product.img}`} alt='' className={classes.img} /> */}
-              <img src={`/images/${product.img}`} alt='' className={classes.img} />
+              <img src={`http://localhost:5000/images/${product.img}`} alt='' className={classes.img} />
+              {/* <img src={`/images/${product.img}`} alt='' className={classes.img} /> */}
               <div className={classes.productData}>
                 <h4 className={classes.title}>{product.title}</h4>
                 <h6 className={classes.subtitle}>{product.desc}</h6>

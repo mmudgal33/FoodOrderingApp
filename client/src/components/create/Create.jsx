@@ -63,8 +63,8 @@ const Create = () => {
         formData.append("filename", filename)
         formData.append("image", image)
 
-        await fetch(`/upload/image`, {
-        // await fetch(`http://localhost:5000/upload/image`, {
+        // await fetch(`/upload/image`, {
+        await fetch(`http://localhost:5000/upload/image`, {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -75,7 +75,7 @@ const Create = () => {
 
       // uploading product 
       const res = await fetch(`http://localhost:5000/product`, {
-      // const res = await fetch(`http://localhost:5000/product`, {
+      // const res = await fetch(`/product`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
