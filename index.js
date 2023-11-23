@@ -9,7 +9,7 @@ const app = express()
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-//const PORT = process.env.PORT || 5000;
+
 
 // connect our db
 
@@ -34,9 +34,28 @@ app.use('/auth', authController)
 app.use('/product', productController)
 app.use('/upload', uploadController)
 
-// start our server
 
-app.listen(process.env.PORT, () => console.log('Server has been started successfully'))
+// Serve static assets if in production
+if(process.env.NODE_ENV === 'production'){
+    JWT_SECRET=process.env.JWT_SECRET,
+    MONGO_URL=process.env.MONGO_URL
+
+    const path = require('path')
+    //set static folder
+    // app.use(express.static('./client/build'));
+
+    app.get('/', (req, res) => {
+        app.use(express.static(path.resolve(__dirname, 'client', 'build')));
+        //res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'));
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
+
+
+// start our server
+// const port = process.env.PORT || 5000;
+const port = 5000;
+app.listen(PORT, () => console.log('Server has been started successfully'))
 
 // server is on port 5000, client is on port 3000,
 // we are going to get a cors ERROR!!, but cors() removes that's error

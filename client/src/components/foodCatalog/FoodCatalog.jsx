@@ -14,7 +14,7 @@ const FoodCatalog = () => {
 
   useEffect(() => {
     const fetchFoodType = async () => {
-      const res = await fetch(`http://localhost:5000/product?category=${foodEndpoint}`, {
+      const res = await fetch(`/product?category=${foodEndpoint}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -38,7 +38,8 @@ const FoodCatalog = () => {
           {filteredFoods.length !== 0 ? filteredFoods.map((f) => (
             <Link to={`/food/${f._id}`} key={f._id} className={classes.food}>
               <div className={classes.imgContainer}>
-                <img src={`http://localhost:5000/images/${f?.img}`} alt="" className={classes.foodImg} />
+                {/* <img src={`http://localhost:5000/images/${f?.img}`} alt="" className={classes.foodImg} /> */}
+                <img src={`/images/${f?.img}`} alt="" className={classes.foodImg} />
               </div>
               <div className={classes.foodDetails}>
                 <h4 className={classes.foodTitle}>{f?.title}</h4>
@@ -53,6 +54,7 @@ const FoodCatalog = () => {
 }
 
 export default FoodCatalog
+
 
 
 // http://localhost:3000/food/65579b7124d03a1f2a827437
